@@ -24,10 +24,6 @@ import {ApiService} from "./services/api-service";
 import {Layout} from "./layout/layout";
 import { FIREBASE_PROVIDERS, defaultFirebase } from 'angularfire2';
 
-
-declare var PUBNUB:any;
-
-
 @Component({
   selector: "app",
   template: "<router-outlet></router-outlet>",
@@ -40,8 +36,6 @@ export class App {
 
   constructor(private api:ApiService,private router: Router, private location: Location) {
       this.api.setUserId();
-      this.api.initPubnub();
-
   }
   ngOnInit(){
   }
