@@ -1,4 +1,22 @@
 Puzzle #2: The Food Dictator
-Small teams of people who work together often have a tough time figuring out where to go for lunch. If you use consensus, this creates a least-common-denominator solution, very boring.  However, an elected Food Dictator is often more bold and creative in decreeing the lunch spot of the day.  
+This is meant to demo food dictator.  There are no database to save messages.  I wanted to demonstrate the flow of becoming a dictator.
 
-Create a simple app/webapp that you can use to persist and manage a list of people who regularly go out to lunch together. The main function of the app is to provide a way for the group to determine the “food dictator” -- the person who gets to decide where to go for lunch -- in a fair and equitable manner, given the people who are present for lunch on that day.
+How it Works:
+In each group there is a dictator.  If you are the current dictator then other users can try to usurp you.  When the usurp button is pressed a card appears with a trivia question that all the users can answer. If only one user gets the question correct they become the dictator and are able to select a restuarant based on their locations.  If more than one user gets the answer correct or if all of them get them wrong then another card appears with a new question.  This happens until one user is left as the winner.
+
+Rules:
+If you are a dictator you have a slight advantage at being able to see the answers of all the users.  Other users can only see that their peers answered the question.
+
+Requirements:
+Node and npm
+
+API used:
+Yelp - For restuarants
+Getty - for Trivia Images
+jService.io - for Trivia questions
+
+
+Instructions:
+1. run npm install at root
+2. After build is complete a local server will run
+3. Navigate to localhost:3000/#/group
