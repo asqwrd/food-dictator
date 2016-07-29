@@ -46,23 +46,6 @@ export class ApiService {
 
     }
 
-    init() : Observable<Object>{
-
-        if(!this.app) {
-            return Observable.forkJoin(
-            ).flatMap((data)=> {
-                return this.createObservable(this.app);
-            });
-
-        }else{
-            return this.createObservable(this.app);
-        }
-    }
-
-    cp(data){
-      console.log(data);
-    }
-
     getRestaurants(): Observable<Object[]>{
       let headers = new Headers();
       headers.append('Content-Type', 'application/javascript');
@@ -129,27 +112,6 @@ export class ApiService {
 
     }
 
-    initPubnub(){
-        this.pubnub = PUBNUB({
-            publish_key: 'pub-c-4d0f43b0-ff8d-4143-9fce-8adb0639c9f3',
-            subscribe_key: 'sub-c-779a8948-3e64-11e6-85a4-0619f8945a4f',
-            //ssl: (location.protocol.toLowerCase() === 'https:'),
-            uuid: this.getUserId(),
-        });
-    }
-
-    getPubnub(){
-        return this.pubnub;
-    }
-
-    getDomain(){
-        return this.domain;
-    }
-
-    setDomain(domain:string){
-        this.domain = domain;
-    }
-
     getQuestion(): Observable<Object>{
       return Observable.forkJoin(
         this.http.get('http://jservice.io/api/random').map((res:Response)=>{
@@ -164,7 +126,7 @@ export class ApiService {
               if(data.result_count > 0){
                 question.image = data.images[0]['display_sizes'][0].uri;
               }else{
-                question.image = "/images/dictator.jpg";
+                question.image = "/food-dictator/images/dictator.jpg";
               }
 
               return question;
