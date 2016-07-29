@@ -9,7 +9,6 @@ import {NgStyle,NgFor} from '@angular/common';
 import 'rxjs/Rx';
 import {Router} from "@angular/router";
 
-//shared components and service
 import {ApiService} from "../../services/api-service";
 import {EventService} from "../../services/event-services";
 import {MomentPipe,Translate} from "../../pipes/pipes";
@@ -38,8 +37,6 @@ export class LunchFeed {
     @Input() users:Array<string>;
     @Input() usurpers:Array<string>;
     answered = new EventEmitter();
-    router:Router;
-    api:ApiService;
     eventService:EventService;
     differ: any;
 
@@ -48,8 +45,6 @@ export class LunchFeed {
 
 
     constructor(private differs: KeyValueDiffers,private zone:NgZone,eventService:EventService,router:Router,apiService:ApiService) {
-        this.router = router;
-        this.api = apiService;
         this.eventService = eventService;
         this.differ = differs.find([{}]).create(null);
     }
@@ -88,7 +83,6 @@ export class LunchFeed {
         let scrollHeight = feedContent.scrollHeight;
         let height = feedContent.clientHeight;
         let maxScrollTop = scrollHeight;
-        //feedContent.scrollTop = maxScrollTop > 0 ? maxScrollTop : 0;
         this.eventService.smoothScroll(feedContent,maxScrollTop,600);
     }
 

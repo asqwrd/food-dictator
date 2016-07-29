@@ -5,7 +5,6 @@ import {NgStyle,NgFor} from '@angular/common';
 
 import 'rxjs/Rx';
 
-//shared components and service
 import {ApiService} from "../../services/api-service";
 import {EventService} from "../../services/event-services";
 import {ComponentHandler} from "../../directives/component-handler";
@@ -16,7 +15,6 @@ import {YelpCard} from "../yelp/yelp";
 
 
 
-//noinspection TypeScriptValidateTypes
 @Component({
     selector: 'feed-card',
     viewProviders: [HTTP_PROVIDERS],

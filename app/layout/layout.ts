@@ -17,12 +17,6 @@ import {
     CanActivate
 } from '@angular/router';
 
-
-
-
-//shared components
-import {EventService} from '../services/event-services';
-import {ApiService} from '../services/api-service';
 import {LunchGroup} from '../pages/lunch-group/lunch-group';
 
 
@@ -36,7 +30,7 @@ import {LunchGroup} from '../pages/lunch-group/lunch-group';
 
 export class Layout{
   @ViewChild('nav') nav:ElementRef;
-  constructor(private api:ApiService, router: Router, private location: Location,eventService:EventService) {
+  constructor() {
   }
   ngOnInit(){
   }

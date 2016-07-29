@@ -6,9 +6,7 @@ import {NgStyle,NgFor} from '@angular/common';
 import 'rxjs/Rx';
 import {Router} from "@angular/router";
 
-//shared components and service
-import {ApiService} from "../../services/api-service";
-import {EventService} from "../../services/event-services";
+
 import {ComponentHandler} from "../../directives/component-handler";
 
 
@@ -29,15 +27,10 @@ export class UserHeader {
     @Input() userid:string;
     @Input() users:Array<Object>;
     @Input() dictator:string;
-    router:Router;
-    api:ApiService;
-    eventService:EventService;
 
 
-    constructor(eventService:EventService,router:Router,apiService:ApiService) {
-        this.router = router;
-        this.api = apiService;
-        this.eventService = eventService;
+    constructor() {
+
     }
 
     ngOnInit(){

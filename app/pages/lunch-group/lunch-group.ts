@@ -13,11 +13,9 @@ import {EventService} from "../../services/event-services";
 
 import {UserHeader} from "../../components/user-header/user-header";
 import {LunchFeed} from "../../components/lunch-feed/lunch-feed";
-import {LunchInput} from "../../components/lunch-input/lunch-input";
 import {ComponentHandler} from "../../directives/component-handler";
 
 import {Subject} from "rxjs/Rx";
-declare var PUBNUB:any;
 declare var MaterialSnackbar:any;
 
 
@@ -26,7 +24,7 @@ declare var MaterialSnackbar:any;
     selector: 'lunch-group',
     viewProviders: [HTTP_PROVIDERS],
     templateUrl: 'app/pages/lunch-group/lunch-group.html',
-    directives:[NgStyle,NgFor,UserHeader,LunchFeed,LunchInput,ComponentHandler]
+    directives:[NgStyle,NgFor,UserHeader,LunchFeed,ComponentHandler]
 })
 
 
