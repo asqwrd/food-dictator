@@ -1,11 +1,11 @@
 <main class="main">
-  <section class="lunch-group-list">
+  <section class="lunch-group-list" #nav>
     <header class="nav-header">
       <span class="nav-title">Groups</span>
     </header>
     <nav class="groups">
       <ul class="groups-items">
-        <li class="groups-item active">
+        <li class="groups-item active" (click)="select_group()">
             <span class="group-avatar"><img class="group-img" src="/images/work.jpg" alt="" /></span>
             <span class="group-name">Work Lunch</span>
         </li>

@@ -1,5 +1,6 @@
 <div class="lunch-group-container">
   <header class="lunch-group-header">
+    <span class="hamburger" (click)="open_nav()"><i class="material-icons">menu</i></span>
     <div class="group-info">
       <h1 class="group-name">Work Lunch</h1>
       <button class="dictator-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" (click)="start()" *ngIf="userid !== dictator">Usurp</button>

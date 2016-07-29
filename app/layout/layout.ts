@@ -1,5 +1,3 @@
-declare var PUBNUB:any;
-
 import {
     Component,
     ViewChild,
@@ -33,27 +31,18 @@ import {LunchGroup} from '../pages/lunch-group/lunch-group';
     templateUrl: "app/layout/layout.html",
     directives: [ROUTER_DIRECTIVES,LunchGroup],
     precompile: [LunchGroup]
-    /*host: {
-        '(document:click)': 'hideDropdowns($event)',
-    }*/
 })
 
 
 export class Layout{
-    pubnub:any;
+  @ViewChild('nav') nav:ElementRef;
+  constructor(private api:ApiService, router: Router, private location: Location,eventService:EventService) {
+  }
+  ngOnInit(){
+  }
 
-    constructor(private api:ApiService, router: Router, private location: Location,eventService:EventService) {
-        window.addEventListener('beforeunload', this.leaveChat);
-    }
-
-    leaveChat = () => {
-        this.api.getPubnub().unsubscribe({ channel: 'test2' });
-    }
-
-
-
-
-    ngOnInit(){
-    }
+  select_group(){
+    this.nav.nativeElement.classList.remove('open');
+  }
 
 }

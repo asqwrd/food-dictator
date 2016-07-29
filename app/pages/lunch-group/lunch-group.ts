@@ -196,4 +196,9 @@ export class LunchGroup {
       }
     }
 
+    open_nav(){
+      let nav = document.querySelector('.lunch-group-list');
+      nav.classList.add('open');
+    }
+
 }

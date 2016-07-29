@@ -4,6 +4,7 @@ app/**/*.js
 app/**/*.map
 script/**/*.gz
 script/**/*.js
+script/**/*.map
 css/
 
 .idea/

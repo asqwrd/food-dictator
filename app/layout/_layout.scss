@@ -13,6 +13,7 @@
     background: #fafafa;
     overflow: auto;
     z-index: 5;
+    @include transition(transform ease .3s);
     .group-list-h1{
       @include font-size(40px);
     }
@@ -77,5 +78,24 @@
     height:100%;
     float:right;
     position: relative;
+  }
+}
+
+@media only screen and (max-width:900px){
+  .main{
+    .lunch-group-content {
+      width: 100%;
+      float: none;
+    }
+
+    .lunch-group-list{
+      @include transform(translateX(-100%));
+      &.open{
+          @include transform(translateX(0));
+      }
+    }
+    .restaurants-modal{
+      width:100%;
+    }
   }
 }
