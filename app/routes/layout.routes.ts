@@ -3,6 +3,6 @@ import {LunchGroup} from '../pages/lunch-group/lunch-group';
 
 
 export const LayoutRoutes: RouterConfig = [
-    { path: "chat", component: LunchGroup },
+    { path: "group", component: LunchGroup },
 
 ];

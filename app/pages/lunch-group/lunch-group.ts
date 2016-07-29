@@ -63,7 +63,6 @@ export class LunchGroup {
         }
 
         this.api.getRestaurants().subscribe((data)=>{
-          console.log(data);
           this.restaurants = data;
 
         })
