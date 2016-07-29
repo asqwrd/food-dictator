@@ -1,0 +1,51 @@
+.feed-content{
+  padding:30px;
+  @include transform(translateY(0%));
+  @include transition(transform ease .3s);
+  height: 100%;
+  overflow: auto;
+
+  .feed-list{
+    .feed-item{
+      margin:20px 10px;
+    }
+  }
+
+  &.open{
+    @include transform(translateY(-300px));
+  }
+
+}
+
+.restaurants-modal{
+  position: fixed;
+  width: calc(100% - 250px);
+  height: 300px;
+  overflow: auto;
+  bottom: 0;
+  background: #fff;
+  z-index: 1;
+  right: 0;
+  @include transform(translateY(100%));
+  @include transition(transform ease .3s);
+  &.open{
+    @include transform(translateY(0));
+  }
+
+  .restaurants{
+    display: flex;
+    position: relative;
+    align-items: center;
+    .restaurant{
+      display: inline-block;
+      margin:10px 0;
+      @include transform(scale(.9));
+      @include transition(transform ease .3s);
+
+      &:hover{
+        @include transform(scale(1));
+      }
+    }
+  }
+
+}

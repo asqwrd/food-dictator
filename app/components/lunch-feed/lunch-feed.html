@@ -1,0 +1,14 @@
+<div class="feed-content" #feedContent (scroll)="onScroll()" >
+    <ul class="feed-list">
+        <li class="feed-item" *ngFor="let card of cards">
+          <feed-card [card]="card" (answered)="answered_question($event)" [dictator]="dictator" [usurpers]="usurpers" [users]="users" [userid]="userid"></feed-card>
+        </li>
+    </ul>
+</div>
+<figure class="restaurants-modal" #restaurantsModal>
+  <ul class="restaurants">
+    <li class="restaurant" *ngFor="let restaurant of restaurants" (click)="selectRestaurant(restaurant)">
+      <yelp-card [restaurant]="restaurant"></yelp-card>
+    </li>
+  </ul>
+</figure>

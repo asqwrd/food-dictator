@@ -1,0 +1,29 @@
+.restaurant-image{
+  position: relative;
+  &.mdl-card {
+    width: 280px;
+    height: 280px;
+    background-position:center;
+    background-size: cover;
+  }
+  .mdl-card__actions {
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .restaurant-info {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .rating{
+    position:absolute;
+    right:10px;
+    top:10px;
+    .rating-stars{
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}

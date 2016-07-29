@@ -1,0 +1,81 @@
+.main{
+  position:relative;
+  height: 100%;
+  width: 100%;
+  .lunch-group-list{
+    position:absolute;
+    width:250px;
+    height:100%;
+    top:0;
+    left:0;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+    border-right: 1px solid #e0e0e0;
+    background: #fafafa;
+    overflow: auto;
+    z-index: 5;
+    .group-list-h1{
+      @include font-size(40px);
+    }
+    .nav-header{
+      padding: 0 20px;
+      height: 60px;
+      border-bottom: 1px solid #e5e5e5;
+      .nav-title{
+        display: inline-block;
+        line-height: 60px;
+      }
+    }
+    .groups-items{
+      .groups-item{
+        padding:20px 10px;
+        cursor: pointer;
+        &.active{
+          background: #eee;
+        }
+        &:hover{
+          background: #eee;
+        }
+        .group-avatar{
+          display: inline-block;
+          width:40px;
+          height:40px;
+          border-radius: 100%;
+          vertical-align: middle;
+          background: #ccc;
+          color: #fff;
+          text-align: center;
+          margin-right:10px;
+          position: relative;
+          .material-icons{
+            line-height: 40px;
+            @include font-size(15px);
+          }
+
+        }
+        .group-img{
+          width:100%;
+          height: 100%;
+          position: absolute;
+          top:0;
+          left:0;
+          object-fit: cover;
+          border-radius: 100%;
+        }
+
+        .group-name{
+          display:inline-block;
+          vertical-align: middle;
+          @include font-size(13px);
+        }
+
+      }
+    }
+  }
+
+  .lunch-group-content{
+    width:calc(100% - 250px);
+    height:100%;
+    float:right;
+    position: relative;
+  }
+}

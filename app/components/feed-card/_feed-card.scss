@@ -1,0 +1,85 @@
+.feed-card{
+  .mdl-card__title{
+    background-size: cover;
+    background-position: center center;
+    height:250px;
+  }
+
+  .user-answers{
+    .user-answer{
+      padding:15px 0;
+    }
+  }
+
+  .answers-section{
+    background: #F4F7F7;
+    .answer{
+      display: inline-block;
+      width: calc(100% - 50px);
+      font-size: 13px;
+      color: #888;
+      vertical-align: middle;
+    }
+  }
+
+  .answer-form{
+    height:40px;
+    .answer-input{
+      height: 40px;
+      display: inline-block;
+      line-height: 40px;
+      border: 0;
+      width: calc(100% - 40px);
+      outline:none;
+      @include font-size(13px);
+    }
+    .mdl-button{
+      position: absolute;
+      min-width:30px;
+      width:30px;
+      height:30px;
+      right:10px;
+      @include centerElement('vertical');
+      .material-icons{
+        @include font-size(15px);
+      }
+    }
+  }
+  .mdl-card__actions{
+    position:relative;
+  }
+}
+
+.restaurants{
+  display: flex;
+  position: relative;
+  align-items: center;
+  .restaurant{
+    display: inline-block;
+    margin:10px 0;
+    @include transform(scale(.9));
+    @include transition(transform ease .3s);
+
+    &:hover{
+      @include transform(scale(1));
+    }
+  }
+  .restaurant-image{
+    &.mdl-card {
+      width: 280px;
+      height: 280px;
+      background-position:center;
+      background-size: cover;
+    }
+    .mdl-card__actions {
+      padding: 16px;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .restaurant-info {
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+}

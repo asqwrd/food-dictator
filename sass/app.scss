@@ -1,0 +1,64 @@
+//Library Styles
+@import '../node_modules/node-reset-scss/scss/_reset.scss';
+@import './mixin';
+@import './components';
+
+
+//Component Partial Styles
+
+@import '../app/components/user-header/user-header';
+@import '../app/components/lunch-input/lunch-input';
+@import '../app/components/lunch-feed/lunch-feed';
+@import '../app/components/feed-card/feed-card';
+@import '../app/components/yelp/yelp';
+
+
+//Layouts css
+@import '../app/layout/layout';
+
+//Directive partial styles
+@import "../app/directives/taggle-directive/taggle";
+
+
+//Pages Partial Styles
+
+@import '../app/pages/lunch-group/lunch-group';
+
+//General Styles
+*{
+  box-sizing:border-box;
+}
+
+html,body{
+  font-size:15px;
+  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  height:100%;
+  line-height:1.4;
+
+}
+
+.avatar{
+  margin: 0;
+  width: 30px;
+  height:30px;
+  border-radius: 100%;
+  vertical-align: middle;
+}
+
+.title{
+  display: block;
+  font-weight: 600;
+  font-size: 18px;
+  padding:20px 40px 0;
+}
+
+.mdl-textfield__input{
+  border-color:#fff;
+}
+
+.mdl-textfield__label{
+  color:#ccc;
+  &:after {
+    background-color: $hl-color;
+  }
+}

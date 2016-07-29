@@ -1,0 +1,16 @@
+<div class="lunch-group-container">
+  <header class="lunch-group-header">
+    <div class="group-info">
+      <h1 class="group-name">Work Lunch</h1>
+      <button class="dictator-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" (click)="start()" *ngIf="userid !== dictator">Usurp</button>
+    </div>
+    <user-header [userid]="userid" [users]="users" [dictator]="dictator"></user-header>
+
+  </header>
+    <lunch-feed [userid]="userid" [usurpers]="usurpers" [users]="users" [cards]="cards" [dictator]='dictator' (answered)="answered_question($event)" [restaurants]="restaurants"></lunch-feed>
+
+    <div class="mdl-js-snackbar mdl-snackbar" #notification component-handler>
+      <div class="mdl-snackbar__text"></div>
+      <button class="mdl-snackbar__action" type="button"></button>
+    </div>
+</div>
