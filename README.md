@@ -27,4 +27,8 @@ jService.io - for Trivia questions<br>
 Instructions:<br>
 1. run npm install at root<br>
 2. After build is complete a local server will run<br>
-3. Navigate to localhost:3000/#/group<br>
+3. Run local server by running lite-server or npm run lite<br>
+4. Navigate to localhost:3000/#/group<br>
+
+You can also go to this url to view the app
+http://ajibade.me/food-dictator/#/group
