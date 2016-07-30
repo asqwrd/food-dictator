@@ -126,7 +126,7 @@ export class ApiService {
               if(data.result_count > 0){
                 question.image = data.images[0]['display_sizes'][0].uri;
               }else{
-                question.image = "/food-dictator/images/dictator.jpg";
+                question.image = "images/dictator.jpg";
               }
 
               return question;
